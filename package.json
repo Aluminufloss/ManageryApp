@@ -1,8 +1,8 @@
 {
   "name": "manageryapp",
   "version": "1.0.0",
-  "description": "My first project",
-  "main": "js/index.js",
+  "description": "Managery app",
+  "main": "js/main.js",
   "scripts": {
     "test": "start"
   },
@@ -17,6 +17,8 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-uglify-es": "^3.0.0"
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.64.2"
   }
 }
