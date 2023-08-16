@@ -1,0 +1,283 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import 'mixins';
+@import 'animations';
+
+.background-image {
+    width: 1280px;
+    height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form {
+    @include form(520, 810);
+    position: relative;
+    &__logo-image {
+        display: inline-block;
+        margin-right: 139px;
+        margin-left: 139px;
+    }
+
+    &__logo {
+        @include flex(column, center, center);
+        font-family: inherit;
+        color: $grey-dark;
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            width: 400px;
+            margin-top: 10px;
+        }
+    }
+
+    &__code {
+        @include flex(row, center, center);
+        width: 290px;
+        height: 70px;
+        margin: 30px auto 0;
+    }
+
+    &__code > li {
+        @include font(48, 400, $black);
+        @include stroke(solid, 1, $grey-dark);
+        text-align: center;
+        width: 50px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    &__code li:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__inputs {
+        width: 440px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    &__inputs > input {
+        @include input(440);
+        margin-top: 20px;
+
+        &:focus {
+            border: solid 1px $grey-dark;
+        }
+    }
+
+    &__inputs input:first-child {
+        margin-top: 30px;
+    }
+
+    &__btn {
+        @include button(440, 40, $orange-main, $black, 8);
+        padding: 8px 0;
+        margin: 30px 40px 0 40px;
+        box-shadow: 2px 3px 4px 0px rgba(120, 120, 120, 0.10);
+        transition: transform 0.15s;
+    }
+
+    &__btn:hover {
+        background-color: $orange-main-black;
+    }
+
+    &__forgot-password {
+        display: inline-block;
+        text-align: right;
+        height: 20px;
+        margin-top: 20px;
+        margin-right: 40px;
+        color: $orange-main;
+        transition: transform 0.15s;
+    }
+
+    &__bottom-stroke {
+        @include flex(row, center, center);
+        margin-top: 30px;
+
+        &-line {
+            height: 2px;
+            width: 180px;
+            background-color: $light-grey;
+        }
+    
+        &-text {
+            text-align: center;
+            width: 24px;
+            margin: 0 27px;
+            color: $light-grey;
+        }
+    }
+
+    &__redirect {
+        width: 270px;
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        margin-left: -135px;
+        text-align: center;
+    }
+
+    &__redirect-link {
+        color: $orange-main;
+        transition: transform 0.15s;
+    }
+
+    &__links div:last-child {
+        margin-top: 20px;
+    }
+
+    &__links--container {
+        @include flex(row, flex-start, center);
+        @include button(250, 40, $white, $black, 100);
+        @include stroke(solid, 1, $light-grey);
+        width: 250px;
+        height: 40px;
+        transition: transform 0.15s;
+
+        &:hover {
+            background-color: $grey-hover-style;
+        }
+
+        & a {
+            color: black;
+        }
+    }
+
+    &__links {
+        margin: 30px auto 0;
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            margin: 8px 12px 8px 20px;
+            
+            &--google {
+                background-image: (url(../images/icons/Google.svg));
+                background-repeat: no-repeat;
+            }
+
+            &--vk {
+                background-image: (url(../images/icons/VK.svg));
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__redirect-link:hover, &__forgot-password:hover {
+        color: $orange-main-black;
+    }
+
+    &__exception {
+        width: 290px;
+        color: $red-exception;
+        font-family: inherit;
+        font-weight: 400;
+        margin: 40px 115px 0 115px;
+        text-align: center;
+    }
+
+    &__password-helper {
+        @include stroke(solid, 3, $grey-stroke);
+        @include font(12, 500, $black);
+        width: 440px;
+        height: 200px;
+        border-radius: 5px;
+        padding: 25px 30px;
+        position: absolute;
+        top: 100px;
+        left: 300px;
+
+        &-text {
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+            line-height: 18px;
+        }
+
+        &-parameters-list li {
+            list-style-type: disc;
+            list-style-position: inside;
+            color: $green-main;
+        }
+
+        &-parameters-list li:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__btn:active, &__links--container:active {
+        transform: scale(0.95);  
+    }
+}
+//--------------------Logo progress overlay--------------------//
+.container__logo, .container__confirmation {
+    @include flex(row, center, center);
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 150px;
+    height: 100px;
+    position: relative;
+
+    &__img {
+        width: 110px;
+        height: 100px;
+    }
+
+    &__shape {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 95px;
+        top: 50px;
+        animation: logoSpin 3s ease-in-out 1s 2 normal;
+        transform-origin: -40px -5px;
+    }
+}
+//--------------------Confirmation form--------------------//
+.confirmation__form {
+    @include form(520, 440);
+
+    &-logo {
+        width: 242px;
+        height: 60px;
+        display: inline-block;
+        margin: 0 auto 20px;
+    }
+
+    &-sign {
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+        margin: 0 auto 30px;
+    }
+
+    &-text {
+        width: 364px;
+        height: 72px;
+        font-size: 24px;
+        text-align: center;
+        color: $grey-dark;
+        margin: 0 auto;
+    }
+}
+//-------------------------------------------------------//

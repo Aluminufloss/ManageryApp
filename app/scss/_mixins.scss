@@ -1,0 +1,43 @@
+@mixin input($width) {
+    height: 40px;
+    width: #{$width}px;
+    border: solid 1px $light-grey;
+    border-radius: 5px;
+    background-color: $white;
+    padding: 8px 15px;
+}
+
+@mixin flex($flex-direction, $justify: null, $align: null) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin form($width: null, $height: null) {
+    @include flex(column, center);
+    width: #{$width}px;
+    height: #{$height}px;
+    margin: 60px;
+    border: solid 3px $grey-stroke;
+    border-radius: 8px;
+    background-color: $white;
+}
+
+@mixin stroke($type, $val, $color) {
+    border: $type #{$val}px $color;
+}
+
+@mixin button($width, $height, $backCol, $color: null, $borderRad: null) {
+    width: #{$width}px;
+    height: #{$height}px;
+    background-color: $backCol;
+    color: $color;
+    border-radius: #{$borderRad}px;
+}
+
+@mixin font($font-size, $font-weight, $font-color) {
+    font-size: #{$font-size}px;
+    font-weight: $font-weight;
+    color: $font-color;
+}

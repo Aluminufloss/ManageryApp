@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,36 +10,46 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
+
 <body>
-    <img class="background-image" src="../images/background_images/back_image1.png" alt="">
     <div class="wrapper">
-        <div class="form">
-            <img class="form__logo-image" src="../images/app-title.png" alt="">
-            <div class="form__inputs">
-                <input class="form__input-email" type="email" placeholder="Email or username">
-                <input class="form__input-password" type="password" placeholder="Password">
-            </div>
-            <button class="form__forgot-password">Forgot password?</button>
-            <button class="form__login-btn">Log in</button>
-            <div class="form__bottom-stroke">
-                <span class="form__bottom-stroke-line"></span>
-                <span class="form__bottom-stroke-text">OR</span>
-                <span class="form__bottom-stroke-line"></span>
-            </div>
-            <div class="form__links">
-                <a href="" class="form__links-google"></a>
-                <a href="" class="form__links-vk"></a>
-            </div>
-            <!-- <p class="form__exception">
-                Something went wrong. Check your email or username and password.
-            </p> -->
-            <div class="form__sign-in">
-                <p class="form__registery-link-text">
-                    Don't have an account?
-                </p>
-                <a class="form__registery-link" href="">Sign in</a> 
+        <img class="background-image" src="../images/background_images/back_image1.png" alt="">
+        <div class="container">
+            <div class="form">
+                <img class="form__logo-image" src="../images/app_logo/app_title.png" alt="">
+                <div class="form__inputs">
+                    <input class="form__inputs--email" type="email" placeholder="Email or username">
+                    <input class="form__inputs--password" type="password" placeholder="Password">
+                </div>
+                <a class="form__forgot-password" href="#">Forgot password?</a>
+                <button class="form__btn">Log in</button>
+                <div class="form__bottom-stroke">
+                    <span class="form__bottom-stroke-line"></span>
+                    <span class="form__bottom-stroke-text">OR</span>
+                    <span class="form__bottom-stroke-line"></span>
+                </div>
+                <div class="form__links">
+                    <div class="form__links--container">
+                        <i class="form__links-icon form__links-icon--google"></i>
+                        <a class="form__links--google" href="#">Continue with Google</a>
+                    </div>
+                    <div class="form__links--container">
+                        <i class="form__links-icon form__links-icon--vk"></i>
+                        <a class="form__links--vk" href="#">Continue with VK</a>
+                    </div>
+                </div>
+                <!-- <p class="form__exception">
+                                Something went wrong. Check your email or username and password.
+                            </p> -->
+                <div class="form__redirect">
+                    <p class="form__redirect-text">
+                        Don't have an account?
+                        <a class="form__redirect-link" href="">Sign up</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

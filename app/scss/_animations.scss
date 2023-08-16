@@ -1,0 +1,14 @@
+@keyframes logoSpin {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+
+    66%{
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
