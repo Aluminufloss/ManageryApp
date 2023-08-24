@@ -1,0 +1,25 @@
+@media (min-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1600px) {
+    .form {
+        width: 420px;
+
+        &__inputs {
+            width: 340px;
+
+            & input {
+                width: 340px;
+            }
+        }
+
+        &__forgot-password {
+            margin-right: 20px;
+        }
+
+        &__btn {
+            width: 340px;
+        }
+    }
+}

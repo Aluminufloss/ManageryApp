@@ -1,43 +1,87 @@
-@mixin input($width) {
-    height: 40px;
-    width: #{$width}px;
-    border: solid 1px $light-grey;
-    border-radius: 5px;
-    background-color: $white;
-    padding: 8px 15px;
+@mixin input($width, $height: 40) {
+  width: #{$width}px;
+  height: #{$height}px;
+  border: solid 1px $light-grey;
+  border-radius: 5px;
+  background-color: $white;
+  padding: 8px 15px;
 }
 
 @mixin flex($flex-direction, $justify: null, $align: null) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin form($width: null, $height: null) {
-    @include flex(column, center);
-    width: #{$width}px;
-    height: #{$height}px;
-    margin: 60px;
-    border: solid 3px $grey-stroke;
-    border-radius: 8px;
-    background-color: $white;
+  @include flex(column, center);
+  width: #{$width}px;
+  height: #{$height}px;
+  margin: auto;
+  border: solid 3px $grey-stroke;
+  border-radius: 8px;
+  background-color: $white;
 }
 
-@mixin stroke($type, $val, $color) {
-    border: $type #{$val}px $color;
+@mixin stroke($type, $val, $color, $border-radius: null) {
+  border: $type #{$val}px $color;
+  border-radius: #{$border-radius}px;
 }
 
 @mixin button($width, $height, $backCol, $color: null, $borderRad: null) {
-    width: #{$width}px;
-    height: #{$height}px;
-    background-color: $backCol;
-    color: $color;
-    border-radius: #{$borderRad}px;
+  width: #{$width}px;
+  height: #{$height}px;
+  background-color: $backCol;
+  color: $color;
+  border-radius: #{$borderRad}px;
 }
 
-@mixin font($font-size, $font-weight, $font-color) {
-    font-size: #{$font-size}px;
-    font-weight: $font-weight;
-    color: $font-color;
+@mixin font($font-size, $font-weight, $font-color: null) {
+  font-size: #{$font-size}px;
+  font-weight: $font-weight;
+  color: $font-color;
+}
+
+@mixin icons($width, $height, $position: null, $top: null, $left: null, $bottom: null, $right: null) {
+  content: "";
+  width: #{$width}px;
+  height: #{$height}px;
+  position: $position;
+  top: #{$top}px;
+  left: #{$left}px;
+  bottom: #{$bottom}px;
+  right: #{$right}px;
+  background-repeat: no-repeat;
+}
+
+//-----------------------------------------------//
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
 }

@@ -12,7 +12,7 @@ function browsersync() {
   browserSync.init({
     server : {
       baseDir: 'app/',
-      index: 'html/login.html'
+      index: 'html/index.html'
     }
   });
 }
