@@ -12,6 +12,7 @@
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
+  user-select: none;
 }
 
 .form {
@@ -23,6 +24,7 @@
     width: 242px;
     height: 60px;
     margin: 0 auto;
+    user-select: none;
   }
 
   &__logo {
@@ -54,19 +56,19 @@
     width: 290px;
     height: 70px;
     margin: 30px auto 0;
-  }
 
-  &__code>li {
-    @include font(48, 400, $black);
-    @include stroke(solid, 1, $grey-dark);
-    text-align: center;
-    width: 50px;
-    height: 70px;
-    border-radius: 5px;
-  }
+    &-number {
+      @include font(48, 400, $black);
+      @include stroke(solid, 1, $grey-dark);
+      text-align: center;
+      width: 50px;
+      height: 70px;
+      border-radius: 5px;
+    }
 
-  &__code li:not(:last-child) {
-    margin-right: 30px;
+    & input:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__inputs {
@@ -101,11 +103,12 @@
   }
 
   &__btn {
-    @include button(440, 40, $orange-main, $black, 8);
+    @include button(440, 40, $orange-main, $white, 8);
     padding: 8px 0;
     margin: 30px 40px 0 40px;
     box-shadow: 2px 3px 4px 0px rgba(120, 120, 120, 0.10);
     transition: transform 0.15s;
+    user-select: none;
   }
 
   &__btn:hover {
@@ -147,11 +150,11 @@
     left: 50%;
     margin-left: -135px;
     text-align: center;
-  }
 
-  &__redirect-link {
-    color: $orange-main;
-    transition: transform 0.15s;
+    &-link {
+      color: $orange-main;
+      transition: transform 0.15s;
+    }
   }
 
   &__links div:last-child {
@@ -470,10 +473,6 @@
         top: 5px;
         left: 8px;
         background-image: url('../images/icons/today_calendar.png');
-      }
-
-      &--today:active {
-        stroke: $white;
       }
 
       &--planned::before {
@@ -950,6 +949,104 @@
       color: $grey-dark;
     }
   }
+}
+
+.date {
+  @include font(16, 500);
+  @include flex(row, center, center);
+  @include button(250, 40, $white, $black, 5);
+  @include stroke(solid, 1, $grey-stroke);
+  padding-left: 10px;
+  margin-top: 30px;
+  margin-right: 20px;
+  filter: drop-shadow(2px 3px 4px rgba(120, 120, 120, .1));
+  transition: transform 0.15s;
+
+  &::after {
+    @include icons(20, 20);
+    margin: 10px;
+    background-image: url("../images/icons/calendar_small.svg");
+  }
+
+  &:hover {
+    background-color: $grey-hover-style;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.graph {
+  @include flex(column, flex-end, flex-end);
+  width: 880px;
+  margin-right: 30px;
+
+  &__wrapper {
+    @include flex(row, flex-start, center);
+    width: 840px;
+    height: 560px;
+    margin: 30px 20px;
+    background-color: red;
+
+    &--inner {
+      @include flex(column, flex-start, center);
+      width: 625px;
+      height: 500px;
+    }
+  }
+
+  &__shevron--left {
+    @include icons(48, 48);
+    margin: auto 20px;
+    background-image: url("../images/icons/shevron_left-graph.svg");
+  }
+
+  &__shevron--right {
+    @include icons(48, 48);
+    margin: auto 20px;
+    background-image: url("../images/icons/shevron_left-graph.svg");
+    transform: rotate(180deg);
+  }
+
+  &__percents {
+    @include flex(column, center, center);
+    @include font(24, 500, $black);
+    margin: 0 20px 40px 0;
+
+    & span {
+      width: 60px;
+      height: 20px;
+      text-align: center;
+    }
+
+    & span:not(:last-child) {
+      margin-bottom: 105px;
+    }
+  }
+
+  &__days {
+    @include font(24, 500, $black);
+
+    & span {
+      width: 35px;
+      height: 30px;
+    }
+
+    & span:not(:last-child) {
+      margin-right: 65px;
+    }
+  }
+}
+
+.statistics {
+  width: 490px;
+}
+
+.graph, .statistics {
+  height: 690px;
+  background-color: $white-sidebar-style;
+  border-radius: 5px;
 }
 
 

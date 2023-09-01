@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper--single-form">
         <div class="container">
-            <div class="form">
+            <form class="form" method="post" action="confirm">
                 <div class="form__logo">
                     <img class="form__logo-image" src="../images/app_logo/app_title.png" alt="">
                     <p class="form__logo-title">
@@ -24,17 +24,17 @@
                         and write a code to confirm your email address.
                     </p>
                 </div> 
-                <ul class="form__code">
-                    <li class="form__code-number">1</li>
-                    <li class="form__code-number">4</li>
-                    <li class="form__code-number">8</li>
-                    <li class="form__code-number">8</li>
-                </ul>
-                <button class="form__btn">Confirm</button>
-                <p class="form__exception">
+                <div class="form__code">
+                    <input class="form__code-number" type="text" maxlength="1"></input>
+                    <input class="form__code-number" type="text" maxlength="1"></input>
+                    <input class="form__code-number" type="text" maxlength="1"></input>
+                    <input class="form__code-number" type="text" maxlength="1"></input>
+                </div>
+                <button class="form__btn" type="submit">Confirm</button>
+                <!-- <p class="form__exception">
                     Something went wrong. Check your email or username and password.
-                </p>
-            </div>
+                </p> -->
+            </form>
         </div>
     </div>
 </body>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper--main">
+        <header class="header">
+            <div class="header__inner">
+                <div class="header__inner-buttons-group">
+                    <ul class="header__inner-buttons-group-list">
+                        <li class="header__inner-buttons-group-list-item">
+                            <div class="header__inner-buttons-group--toggle"></div>
+                        </li>
+                        <li class="header__inner-buttons-group-list-item">
+                            <div class="header__inner-buttons-group--home"></div>
+                        </li>
+
+                        <li class="header__inner-buttons-group-list-item">
+                            <form action="" class="header__inner-buttons-group--search">
+                                <input type="search" name="search" placeholder="Search">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <img class="header__inner-title" src="../images/app_logo/app_title.png" alt="">
+                <div class="header__inner-buttons-group">
+                    <ul class="header__inner-buttons-group-list">
+                        <li class="header__inner-buttons-group-list-item">
+                            <div class="header__inner-buttons-group--notification"></div>
+                        </li>
+                        <li class="header__inner-buttons-group-list-item">
+                            <div class="header__inner-buttons-group--help"></div>
+                        </li>
+                        <li class="header__inner-buttons-group-list-item">
+                            <div class="header__inner-buttons-group--username">Saul Goodman</div>
+                        </li>
+                        <li class="header__inner-buttons-group-list-item">
+                            <div class="header__inner-buttons-group--avatar"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="header__stroke"></span>
+        </header>
+
+        <main>
+            <section class="sidebar sidebar--left">
+                <ul class="sidebar__menu">
+                    <li class="sidebar__menu-item">
+                        <div class="sidebar__menu-item--today">Today</div>
+                    </li>
+                    <li class="sidebar__menu-item">
+                        <div class="sidebar__menu-item--planned">Planned</div>
+                    </li>
+                    <li class="sidebar__menu-item">
+                        <div class="sidebar__menu-item--analytics">Analytics</div>
+                    </li>
+                    <li class="sidebar__menu-item">
+                        <div class="sidebar__menu-item--tasks">Tasks</div>
+                    </li>
+                </ul>
+                <span class="sidebar__stroke"></span>
+                <ul class="sidebar__menu">
+                    <li class="sidebar__menu-item">
+                        <button class="sidebar__menu-item--btn">Add new list</button>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="container--main">
+                <div class="container--main-graph">
+                    <div class="main__task-header main__task-header--big">
+                        <h1 class="main__task-header-title">Analytics</h1>
+                    </div>
+                    <section class="graph">
+                        <button class="date">17 Jul 2023 - 24 Jul 2023</button>
+                        <div class="graph__wrapper">
+                            <div class="graph__shevron--left"></div>
+                            <div class="graph__percents">
+                                <span class="graph__percents-percent">100%</span>
+                                <span class="graph__percents-percent">75%</span>
+                                <span class="graph__percents-percent">50%</span>
+                                <span class="graph__percents-percent">25%</span>
+                                <span class="graph__percents-percent">0</span>
+                            </div>
+                            <div class="graph__wrapper--inner">
+                                <div class="graph__inner">
+                                    
+
+                                </div>
+                                <div class="graph__days">
+                                    <span class="graph__days-day">M</span>
+                                    <span class="graph__days-day">T</span>
+                                    <span class="graph__days-day">W</span>
+                                    <span class="graph__days-day">TH</span>
+                                    <span class="graph__days-day">F</span>
+                                    <span class="graph__days-day">SA</span>
+                                    <span class="graph__days-day">SU</span>
+                                </div>
+                            </div>
+                            <div class="graph__shevron--right"></div>
+                        </div>
+                    </section>
+
+                    <section class="statistics">
+                        <div class="statistics__wrapper">
+                            <div class="statistics__weekly-progress">
+                                <h2 class="statistics__weekly-progress-title">Weekly progress</h2>
+                                <svg class="statistics__weekly-progress-ring" width="160" height="160">
+                                    <circle width="160" height="160" class="statistics__progress-ring-circle" stroke="#000" stroke-width="10" cx="60" cy="60" radius="60" fill="#000"/>
+                                </svg>
+                            </div>
+                            <div class="statistics__comment">
+                                <h2 class="statistics__comment-title">Add comment</h2>
+                                <textarea class="statistics__comment-text" placeholder="Your comment" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="statistics__tasks-progress">
+                            <h2 class="statistics__tasks-progress-title">Tasks Progress</h2>
+                            <ul class="statistics__tasks-progress-list">
+                                <li class="statistics__tasks-progress-list-item">
+                                    <h4 class="statistics__tasks-progress-list-item--title">High priority</h4>
+                                    <p class="statistics__tasks-progress-list-item--quantity">3/8</p>
+                                    <div class="statistics__tasks-progress-list-item--bar">
+                                        <div class="statistics__tasks-progress-list-item--bar--progress"></div>
+                                    </div>
+                                </li>
+                                <li class="statistics__tasks-progress-list-item">
+                                    <h4 class="statistics__tasks-progress-list-item--title">Middle priority</h4> 
+                                    <p class="statistics__tasks-progress-list-item--quantity">4/9</p>
+                                    <div class="statistics__tasks-progress-list-item--bar">
+                                        <div class="statistics__tasks-progress-list-item--bar--progress"></div>
+                                    </div>
+                                </li>
+                                <li class="statistics__tasks-progress-list-item">
+                                    <h4 class="statistics__tasks-progress-list-item--title">Low priority</h4>
+                                    <p class="statistics__tasks-progress-list-item--quantity">3/4</p>
+                                    <div class="statistics__tasks-progress-list-item--bar">
+                                        <div class="statistics__tasks-progress-list-item--bar--progress"></div>
+                                    </div>
+                                </li>
+                                <li class="statistics__tasks-progress-list-item">
+                                    <h4 class="statistics__tasks-progress-list-item--title">Without priority</h4>
+                                    <p class="statistics__tasks-progress-list-item--quantity">10/20</p>
+                                    <div class="statistics__tasks-progress-list-item--bar">
+                                        <div class="statistics__tasks-progress-list-item--bar--progress"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <form class="statistics__btns-group" action="">
+                                <button class="statistics__btns-group--month-stat">Get monthly statistics</button>
+                                <button class="statistics__btns-group--year-stat"></button>
+                                <button class="statistics__btns-group--save"></button>
+                                <button class="statistics__btns-group--print"></button>
+                                <button class="statistics__btns-group--share"></button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

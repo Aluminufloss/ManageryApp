@@ -11,8 +11,8 @@ const del            = require('del');
 function browsersync() {
   browserSync.init({
     server : {
-      baseDir: 'app/',
-      index: 'html/index.html'
+      baseDir: 'app/views/',
+      index: 'html/confirmEmail.html'
     }
   });
 }
@@ -22,7 +22,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src('app/images/**/*')
+  return src('app/views/images/**/*')
     .pipe(imagemin(
       [
         imagemin.gifsicle({ interlaced: true }),
@@ -50,31 +50,31 @@ function scripts() {
 }
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('app/views/scss/style.scss')
       .pipe(scss({outputStyle: 'compressed'}))
       .pipe(concat('style.min.css'))
       .pipe(autoprefixer({
         overrideBrowserslist: ['last 10 version'],
         grid: true
       }))
-      .pipe(dest('app/css'))
+      .pipe(dest('app/views/css'))
       .pipe(browserSync.stream())
 }
 
 function build() {
   return src([
-    'app/css/style.min.css',
-    'app/fonts/**/*',
+    'app/views/css/style.min.css',
+    'app/views/fonts/**/*',
     'app/js/main.min.js',
-    'app/html/*.html'
+    'app/views/html/*.html'
   ], {base: 'app'})
     .pipe(dest('dist'))
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);
+  watch(['app/views/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/html/*.html']).on('change', browserSync.reload);
+  watch(['app/views/html/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;

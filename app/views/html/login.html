@@ -12,16 +12,16 @@
 
 <body>
     <div class="wrapper">
+        <img class="background-image" src="../images/background_images/back_image1.png" alt="">
         <div class="container">
-            <img class="background-image" src="../images/background_images/back_image1.png" alt="">
-            <div class="form">
+            <form class="form" method="post" action="login">
                 <img class="form__logo-image" src="../images/app_logo/app_title.png" alt="">
                 <div class="form__inputs">
-                    <input class="form__inputs--email" type="email" placeholder="Email or username">
-                    <input class="form__inputs--password" type="password" placeholder="Password">
+                    <input class="form__inputs--email" type="email" name="email" placeholder="Email or username">
+                    <input class="form__inputs--password" type="password" name="password" placeholder="Password">
                 </div>
                 <a class="form__forgot-password" href="#">Forgot password?</a>
-                <button class="form__btn">Log in</button>
+                <button class="form__btn" type="submit">Log in</button>
                 <div class="form__bottom-stroke">
                     <span class="form__bottom-stroke-line"></span>
                     <span class="form__bottom-stroke-text">OR</span>
@@ -43,10 +43,10 @@
                 <div class="form__redirect">
                     <p class="form__redirect-text">
                         Don't have an account?
-                        <a class="form__redirect-link" href="">Sign up</a>
+                        <a class="form__redirect-link" href="/registration">Sign up</a>
                     </p>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </body>
